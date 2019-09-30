@@ -5,7 +5,7 @@ package com.example.hw1;
  * @author Stephen Nguyen
  * @date 9/29/19
  *
- * Possible caveat: Many postion variables, such as margins, are hardcoded
+ * Possible caveat: Many position variables, such as margins, are hardcoded
  */
 
 import android.content.Context;
@@ -18,7 +18,6 @@ import java.util.Random;
 
 public class Face extends SurfaceView
 {
-
     public int skinColor;
     public int hairColor;
     public int eyeColor;

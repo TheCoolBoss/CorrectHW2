@@ -8,6 +8,8 @@ package com.example.hw1;
  *
  * Note: The package name is inconsistent with the project name.
  * This was a typo on my part.
+ *
+ * Possible caveat: The ExampleInstrumentedTest file has errors, but the program still runs normally
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,12 +31,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     //Used for determining which radiobutton is selected
     String chosenButton = " ";
-
-    //Represents the red, green, and blue values of the color that the seekbars update
-    private int r;
-    private int g;
-    private int b;
-
+    
     //Used for spinner options
     String[] list = {"Style 1 (Rectangle)", "Style 2 (Oval)", "Style 3 (Round Rect)"};
 
@@ -81,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         SeekBar red = findViewById(R.id.redBar);
         SeekBar green = findViewById(R.id.greenBar);
         SeekBar blue = findViewById(R.id.blueBar);
-        Spinner hairstyle = (Spinner) findViewById(R.id.hairstyle);
+        Spinner hairstyle = findViewById(R.id.hairstyle);
 
         face.randomize();
 
@@ -143,7 +140,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         {
             case R.id.redBar:
             {
-                r = progress;
                 if (chosenButton.equals("eyes"))
                 {
                     face.eyeR = progress;
@@ -161,7 +157,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
             case R.id.greenBar:
             {
-                g = progress;
                 if (chosenButton.equals("eyes"))
                 {
                     face.eyeG = progress;
@@ -179,7 +174,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
             case R.id.blueBar:
             {
-                b = progress;
                 if (chosenButton.equals("eyes"))
                 {
                     face.eyeB = progress;
@@ -196,18 +190,20 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             break;
         }
 
-        int newColor = Color.argb(255, r, g, b);
         //Nothing is updated if no radiobutton is selected
         if (chosenButton.equals("eyes"))
         {
+            int newColor = Color.argb(255, face.eyeR, face.eyeG, face.eyeB);
             face.eye.setColor(newColor);
         }
         else if (chosenButton.equals("skin"))
         {
+            int newColor = Color.argb(255, face.skinR, face.skinG, face.skinB);
             face.skin.setColor(newColor);
         }
         else if (chosenButton.equals("hair"))
         {
+            int newColor = Color.argb(255, face.hairR, face.hairG, face.hairB);
             face.hair.setColor(newColor);
         }
         face.invalidate();
