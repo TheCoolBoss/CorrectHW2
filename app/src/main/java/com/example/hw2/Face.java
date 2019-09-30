@@ -1,4 +1,4 @@
-package com.example.hw1;
+package com.example.hw2;
 /**
  * Represents a face to draw
  *

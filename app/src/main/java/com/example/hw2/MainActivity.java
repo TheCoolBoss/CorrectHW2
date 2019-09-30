@@ -1,13 +1,10 @@
-package com.example.hw1;
+package com.example.hw2;
 /**
  * Contains all tools (SeekBars, Buttons, RadioButtons, etc.)
  * and their respective listeners
  *
  * @author Stephen Nguyen
  * @date 9/29/19
- *
- * Note: The package name is inconsistent with the project name.
- * This was a typo on my part.
  *
  * Possible caveat: The ExampleInstrumentedTest file has issues, but the program still runs normally
  */
