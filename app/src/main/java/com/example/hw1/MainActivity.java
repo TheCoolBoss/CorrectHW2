@@ -9,7 +9,7 @@ package com.example.hw1;
  * Note: The package name is inconsistent with the project name.
  * This was a typo on my part.
  *
- * Possible caveat: The ExampleInstrumentedTest file has errors, but the program still runs normally
+ * Possible caveat: The ExampleInstrumentedTest file has issues, but the program still runs normally
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     //Used for determining which radiobutton is selected
     String chosenButton = " ";
-    
+
     //Used for spinner options
     String[] list = {"Style 1 (Rectangle)", "Style 2 (Oval)", "Style 3 (Round Rect)"};
 
